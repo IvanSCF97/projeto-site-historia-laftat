@@ -1,0 +1,252 @@
+body {
+  background: #1a1a1a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+strong {
+  color: #FFE066;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.header-content h1 {
+  font-size: 4.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  letter-spacing: 10px;
+  color: #ffd700;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Navegação */
+nav {
+  background: #2a2a2a;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Seções */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffd700;
+  font-size: 2.5em;
+}
+
+.section-extra-title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #ffe066;
+  font-size: 1.6em;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.2em;
+}
+
+/* Mapa */
+.map-container {
+  position: relative;
+  text-align: center;
+}
+
+.map-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 4px solid #ffd700;
+}
+
+/* Caixa de Informações */
+#info-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ffd700;
+  max-width: 300px;
+  display: none;
+}
+
+#info-box h3 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+#info-box p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #2a2a2a;
+  overflow-y: scroll;
+  max-height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  border-left: 4px solid #ffd700;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.card h4 {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.card p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+body::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+/* Rodapé */
+footer {
+  background: #2a2a2a;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 4px solid #ffd700;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+
+/* Botão Voltar ao Topo */
+#back-to-top {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffd700; /* Cor dourada */
+  color: #1a1a1a; /* Cor do texto */
+  border: none;
+  border-radius: 50%; /* Formato circular */
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em; /* Tamanho maior para o ícone ou texto */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  display: flex; /* Usando flexbox para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+#back-to-top:hover {
+  background-color: #ffe066; /* Cor mais clara ao passar o mouse */
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+}
+
+#back-to-top:active {
+  transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header-content h1 {
+    display: flex;
+      font-size: 3em;
+      letter-spacing: 5px;
+  }
+
+  nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+  }
+
+  .cards-container {
+      grid-template-columns: 1fr;
+  }
+}
